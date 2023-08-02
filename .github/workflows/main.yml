@@ -43,7 +43,7 @@ jobs:
 
       run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
       
-    - run: Enable-NetFirewallRule -Name "RemoteDesktop-UserMode-In-TCP
+    - run: Enable-NetFirewallRule -Name "RemoteDesktop-UserMode-In-TCP"
 
     - run:  REG ADD "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
 
